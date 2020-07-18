@@ -1,0 +1,7 @@
+@media only screen and (max-width:520px){
+    main{
+        .boxes{
+            grid-template-columns: 1fr;
+        }
+    }
+}

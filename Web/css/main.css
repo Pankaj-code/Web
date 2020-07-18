@@ -1,0 +1,463 @@
+@font-face {
+  font-family: Aladin;
+  src: url(../fonts/Aladin-Regular.ttf);
+}
+
+@font-face {
+  font-family: orbitron;
+  src: url(../fonts/Orbitron-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: lato;
+  src: url(../fonts/Lato-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: lato;
+}
+
+.header {
+  min-height: 200px;
+  background-color: #fff;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 5fr 1fr;
+      grid-template-columns: 1fr 5fr 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+}
+
+.header .navBtn .open, .header .navBtn .close {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: #002b3a;
+}
+
+.header .navBtn .open i, .header .navBtn .close i {
+  font-size: 48px;
+}
+
+.header .navBtn .close {
+  display: none;
+}
+
+.header h1 {
+  color: #002b3a;
+  letter-spacing: 2px;
+  font-size: 3em;
+}
+
+.header h1 a {
+  text-decoration: none;
+  color: inherit;
+  font-family: aladin;
+}
+
+.header h1 a:hover {
+  color: #00a2ff;
+}
+
+.header .user button {
+  cursor: pointer;
+  background-color: #fff;
+  border: 2px solid #002b3a;
+  color: #002b3a;
+  font-family: aladin;
+  font-size: 1.5em;
+  padding: 0.5em 1em;
+  border-radius: 1em;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+.header .user:hover button {
+  background-color: #002b3a;
+  color: #fff;
+}
+
+.navbar {
+  display: none;
+}
+
+nav {
+  background-color: #002b3a;
+  display: block;
+}
+
+nav #bar {
+  overflow: auto;
+  width: 90%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav #bar a {
+  cursor: pointer;
+  padding: 1em;
+  color: #fff;
+  text-decoration: none;
+}
+
+nav #bar a:hover {
+  background-color: #00a2ff;
+  color: #fff;
+  text-decoration: none;
+}
+
+nav #bar .active {
+  background-color: #00a2ff;
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  position: relative;
+  height: 100%;
+}
+
+main .section {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: inherit;
+  min-width: 200px;
+  max-width: 250px;
+  background-color: #002b3a;
+  top: 0;
+  left: -250px;
+}
+
+main .section .box .btn {
+  width: 100%;
+  padding: 1em 0.5em;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+}
+
+main .slideshow {
+  width: 100%;
+}
+
+main .slideshow img {
+  width: 100%;
+}
+
+main .boxes {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2em;
+  padding: 2em;
+}
+
+main .boxes .box1, main .boxes .box2, main .boxes .box3, main .boxes .box4, main .boxes .box5, main .boxes .box6 {
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+}
+
+main .boxes .box1 img, main .boxes .box2 img, main .boxes .box3 img, main .boxes .box4 img, main .boxes .box5 img, main .boxes .box6 img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+main .boxes .box1 .info, main .boxes .box2 .info, main .boxes .box3 .info, main .boxes .box4 .info, main .boxes .box5 .info, main .boxes .box6 .info {
+  position: absolute;
+  background-color: #002b3a;
+  padding: 4em;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  text-align: center;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-transform: translateY(100%) rotateX(90deg);
+          transform: translateY(100%) rotateX(90deg);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+main .boxes .box1 .info p, main .boxes .box2 .info p, main .boxes .box3 .info p, main .boxes .box4 .info p, main .boxes .box5 .info p, main .boxes .box6 .info p {
+  text-align: justify;
+}
+
+main .boxes .box1 .info button, main .boxes .box2 .info button, main .boxes .box3 .info button, main .boxes .box4 .info button, main .boxes .box5 .info button, main .boxes .box6 .info button {
+  color: #fff;
+  background-color: transparent;
+  border: 2px solid #fff;
+  padding: 1em 2em;
+  border-radius: 2em;
+}
+
+main .boxes .box1 .info button:hover, main .boxes .box2 .info button:hover, main .boxes .box3 .info button:hover, main .boxes .box4 .info button:hover, main .boxes .box5 .info button:hover, main .boxes .box6 .info button:hover {
+  background-color: #00a2ff;
+  border-color: #00a2ff;
+}
+
+main .boxes .box1:hover img, main .boxes .box2:hover img, main .boxes .box3:hover img, main .boxes .box4:hover img, main .boxes .box5:hover img, main .boxes .box6:hover img {
+  -webkit-transform: translateY(-100%) rotateX(90deg);
+          transform: translateY(-100%) rotateX(90deg);
+}
+
+main .boxes .box1:hover .info, main .boxes .box2:hover .info, main .boxes .box3:hover .info, main .boxes .box4:hover .info, main .boxes .box5:hover .info, main .boxes .box6:hover .info {
+  -webkit-transform: translateY(0) rotateX(0);
+          transform: translateY(0) rotateX(0);
+}
+
+.footer {
+  display: -ms-grid;
+  display: grid;
+  background-color: #002b3a;
+  color: #fff;
+  -ms-grid-columns: (1fr)[6];
+      grid-template-columns: repeat(6, 1fr);
+}
+
+.footer .f1 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1/4;
+}
+
+.footer .f1 img {
+  width: 100%;
+  height: 100%;
+}
+
+.footer .row1 {
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-column: 4/5;
+  padding: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer .row1 h6 {
+  font-size: 1.3em;
+  text-transform: uppercase;
+}
+
+.footer .row1 a {
+  padding: 0.5em 0;
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer .row1 a:hover {
+  text-decoration: none;
+}
+
+.footer .row2 {
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 1;
+  grid-column: 5/6;
+  padding: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer .row2 h6 {
+  font-size: 1.3em;
+  text-transform: uppercase;
+}
+
+.footer .row2 a {
+  padding: 0.5em 0;
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer .row2 a:hover {
+  text-decoration: none;
+}
+
+.footer .row3 {
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 1;
+  grid-column: 6/7;
+  padding: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer .row3 h6 {
+  font-size: 1.3em;
+  text-transform: uppercase;
+}
+
+.footer .row3 a {
+  padding: 0.5em 0;
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer .row3 a:hover {
+  text-decoration: none;
+}
+
+.f3 {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #fff;
+  padding: 2em 0;
+}
+
+.f3 p {
+  color: #002b3a;
+  text-align: center;
+  width: 100%;
+}
+
+.f3 p b {
+  font-family: aladin;
+  font-size: 1.2em;
+}
+
+.f3 :nth-child(2) {
+  font-size: 1.2em;
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar {
+    display: block;
+    padding: 1em;
+    background-color: #002b3a;
+  }
+  .navbar .arrow {
+    width: 100%;
+    display: block;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+  }
+  .navbar .arrow i {
+    font-size: 2em;
+  }
+  .navbar .closing {
+    width: 100%;
+    display: none;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+  }
+  .navbar .closing i {
+    font-size: 2em;
+  }
+  nav {
+    display: none;
+  }
+  nav #bar {
+    width: 100%;
+    text-align: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main .boxes {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  main .boxes .box1, main .boxes .box2, main .boxes .box3, main .boxes .box4, main .boxes .box5, main .boxes .box6 {
+    display: -ms-grid;
+    display: grid;
+    overflow: hidden;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 200px 50px;
+        grid-template-rows: 200px 50px;
+  }
+  main .boxes .box1 img, main .boxes .box2 img, main .boxes .box3 img, main .boxes .box4 img, main .boxes .box5 img, main .boxes .box6 img {
+    height: 200px;
+  }
+  main .boxes .box1 .info, main .boxes .box2 .info, main .boxes .box3 .info, main .boxes .box4 .info, main .boxes .box5 .info, main .boxes .box6 .info {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    -webkit-transform: translateY(0) rotateX(0);
+            transform: translateY(0) rotateX(0);
+  }
+  main .boxes .box1 .info p, main .boxes .box2 .info p, main .boxes .box3 .info p, main .boxes .box4 .info p, main .boxes .box5 .info p, main .boxes .box6 .info p {
+    display: none;
+  }
+  main .boxes .box1 .info button, main .boxes .box2 .info button, main .boxes .box3 .info button, main .boxes .box4 .info button, main .boxes .box5 .info button, main .boxes .box6 .info button {
+    margin-top: 0.6em;
+    padding: 0.5em 1em;
+    border-radius: 2em;
+  }
+  main .boxes .box1:hover img, main .boxes .box2:hover img, main .boxes .box3:hover img, main .boxes .box4:hover img, main .boxes .box5:hover img, main .boxes .box6:hover img {
+    -webkit-transform: translateY(0) rotateX(0);
+            transform: translateY(0) rotateX(0);
+  }
+  .footer {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  .footer .f1 {
+    display: none;
+  }
+  .footer .row1 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+  }
+  .footer .row2 {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+  }
+  .footer .row3 {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-column: 3/4;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  main .boxes {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+/*# sourceMappingURL=main.css.map */
