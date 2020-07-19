@@ -114,6 +114,7 @@ main{
         max-width: 250px;
         background-color: $primary-color;
         top:0;
+        z-index: 10;
         left: -250px;
         .box{
             .btn{
@@ -127,8 +128,49 @@ main{
     }
     .slideshow{
         width: 100%;
-        img{
-            width: 100%;
+        height: 480px;
+        position: relative;
+        overflow: hidden;
+        .slides{
+            width: inherit;
+            height: inherit;
+            img{
+                width: inherit;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+        .prevBtn{
+            cursor: pointer;
+            display: none;
+            background-color: transparent;
+            border: none;
+            position: absolute;
+            top: 50%;
+            left: 5%;
+            transform: translate(0,-50%);
+            z-index: 5;
+            color:$light;
+            i{
+                font-size: 48px;
+            }
+        }
+        .nextBtn{
+            cursor: pointer;
+            display: block;
+            background-color: transparent;
+            border: none;
+            position: absolute;
+            top: 50%;
+            right: 5%;
+            transform: translate(0,-50%);
+            z-index: 5;
+            color:$light;
+            i{
+                font-size: 48px;
+            }
         }
     }
     .boxes{

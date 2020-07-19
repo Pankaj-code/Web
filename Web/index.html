@@ -13,7 +13,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <title>Home</title>
     </head>
-    <body>
+    <body onload="slidefix();">
         <div class="header animate__animated animate__slideInDown">
             <div class="navBtn">
                 <button class="open" onclick="opennav();">
@@ -67,7 +67,17 @@
                 </a>
             </div>
             <div class="slideshow">
-                <img src="img/slide1.jpg" alt="slideshow">
+                <div class="slides">
+                    <img id="slide1" src="img/slide1.jpg" alt="Slide1">
+                    <img id="slide2" src="img/html5.jpg" alt="Slide2">
+                    <img id="slide3" src="img/css3.jpg" alt="Slide3">
+                </div>
+                <button class="prevBtn" onclick="slideLeft();">
+                    <i class="material-icons">keyboard_arrow_left</i>
+                </button>
+                <button class="nextBtn" onclick="slideRight();">
+                    <i class="material-icons">keyboard_arrow_right</i>
+                </button>
             </div>
             <div class="boxes">
                 <div class="box1">

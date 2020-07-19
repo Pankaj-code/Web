@@ -139,6 +139,7 @@ main .section {
   max-width: 250px;
   background-color: #002b3a;
   top: 0;
+  z-index: 10;
   left: -250px;
 }
 
@@ -152,10 +153,58 @@ main .section .box .btn {
 
 main .slideshow {
   width: 100%;
+  height: 480px;
+  position: relative;
+  overflow: hidden;
 }
 
-main .slideshow img {
-  width: 100%;
+main .slideshow .slides {
+  width: inherit;
+  height: inherit;
+}
+
+main .slideshow .slides img {
+  width: inherit;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+main .slideshow .prevBtn {
+  cursor: pointer;
+  display: none;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  z-index: 5;
+  color: #fff;
+}
+
+main .slideshow .prevBtn i {
+  font-size: 48px;
+}
+
+main .slideshow .nextBtn {
+  cursor: pointer;
+  display: block;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  z-index: 5;
+  color: #fff;
+}
+
+main .slideshow .nextBtn i {
+  font-size: 48px;
 }
 
 main .boxes {
@@ -392,6 +441,9 @@ main .boxes .box1:hover .info, main .boxes .box2:hover .info, main .boxes .box3:
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  main .slideshow {
+    height: 400px;
+  }
   main .boxes {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
@@ -455,6 +507,9 @@ main .boxes .box1:hover .info, main .boxes .box2:hover .info, main .boxes .box3:
 }
 
 @media only screen and (max-width: 520px) {
+  main .slideshow {
+    height: 300px;
+  }
   main .boxes {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;

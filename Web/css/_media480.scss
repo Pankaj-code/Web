@@ -1,5 +1,8 @@
 @media only screen and (max-width:520px){
     main{
+        .slideshow{
+            height: 300px;
+        }
         .boxes{
             grid-template-columns: 1fr;
         }
