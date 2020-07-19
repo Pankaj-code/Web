@@ -80,3 +80,12 @@ function slideRight(){
         prevBtn.style.display="block";
     }
 }
+var count=0;
+setInterval(() => {
+    if(counter+1<lastVal)
+        slideRight();
+    else
+        while(counter!=0){
+            slideLeft();
+        }
+}, 5000);
