@@ -144,6 +144,7 @@ main .section {
 }
 
 main .section .box .btn {
+  cursor: pointer;
   width: 100%;
   padding: 1em 0.5em;
   background-color: transparent;
@@ -404,6 +405,92 @@ main .boxes .box1:hover .info, main .boxes .box2:hover .info, main .boxes .box3:
   font-size: 1.2em;
 }
 
+.login-form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.login-form form {
+  padding: 2em;
+  min-width: 40%;
+}
+
+.login-form form .login {
+  padding: 5em;
+}
+
+.login-form form .login input {
+  display: block;
+  margin: 0.5em 0;
+  padding: 0.5em;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #000;
+}
+
+.login-form form .login input:focus {
+  border-color: #002b3a;
+}
+
+.login-form form .login input[type="submit"] {
+  padding: 0.5em;
+  border: none;
+  background-color: #002b3a;
+  color: #fff;
+  margin-top: 1em;
+}
+
+.login-form form .login input[type="submit"]:hover {
+  background-color: #00a2ff;
+}
+
+.courses {
+  width: 80%;
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+
+.notes {
+  width: 80%;
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  padding: 1em 0;
+}
+
+.notes .box {
+  height: 150px;
+  position: relative;
+}
+
+.notes .box .card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 1em;
+  max-height: 100px;
+  min-height: auto;
+  -webkit-box-shadow: 0 0 5px #000;
+          box-shadow: 0 0 5px #000;
+  border-radius: 10px;
+  text-align: center;
+}
+
 @media only screen and (max-width: 768px) {
   .navbar {
     display: block;
@@ -504,6 +591,10 @@ main .boxes .box1:hover .info, main .boxes .box2:hover .info, main .boxes .box3:
     -ms-grid-column-span: 1;
     grid-column: 3/4;
   }
+  .login-form form {
+    padding: 2em;
+    min-width: 80%;
+  }
 }
 
 @media only screen and (max-width: 520px) {
@@ -513,6 +604,10 @@ main .boxes .box1:hover .info, main .boxes .box2:hover .info, main .boxes .box3:
   main .boxes {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+  }
+  .login-form form {
+    padding: 2em;
+    width: 100%;
   }
 }
 /*# sourceMappingURL=main.css.map */

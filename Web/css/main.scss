@@ -1,3 +1,5 @@
+$pColor: #01AE8F;
+$sColor: #00BCFE;
 $primary-color: #002b3a;
 $sec-color: #00a2ff;
 $light: #fff;
@@ -118,6 +120,7 @@ main{
         left: -250px;
         .box{
             .btn{
+                cursor: pointer;
                 width:100%;
                 padding: 1em 0.5em;
                 background-color: transparent;
@@ -306,6 +309,69 @@ main{
     }
     :nth-child(2){
         font-size: 1.2em;
+    }
+}
+.login-form{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    form{
+        padding: 2em;
+        min-width: 40%;
+        .login{
+            padding: 5em;
+            input{
+                display: block;
+                margin: 0.5em 0;
+                padding: 0.5em;
+                width: 100%;
+                border:none;
+                border-bottom: 2px solid $dark;
+                &:focus{
+                    border-color: $primary-color;
+                }
+            }
+            input[type="submit"]{
+                padding: 0.5em;
+                border: none;
+                background-color: $primary-color;
+                color: $light;
+                margin-top: 1em;
+                &:hover{
+                    background-color: $sec-color;
+                }
+            }
+        }
+    }
+}
+.courses{
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.notes{
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 1em 0;
+    .box{
+        height: 150px;
+        position: relative;
+        .card{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 1em;
+            max-height: 100px;
+            min-height: auto;
+            box-shadow: 0 0 5px $dark;
+            border-radius: 10px;
+            text-align: center;
+        }
     }
 }
 @import 'media768';
